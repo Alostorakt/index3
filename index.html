@@ -4,39 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JALAL</title>
-
-<!-- الخطوط -->
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tajawal:wght@700&display=swap" rel="stylesheet">
-
-<!-- أيقونات Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-
 <style>
 body {
   margin: 0;
-  font-family: 'Tajawal', sans-serif;
+  font-family: "Tajawal", Arial, sans-serif;
   background: #000;
   color: #fff;
   text-align: center;
+  height: 100vh;
 }
 
-/* العنوان */
 .header {
   padding: 30px 20px 10px;
 }
 .header h1 {
-  font-family: 'Great Vibes', cursive; /* الخط الجميل */
-  font-size: 56px;
+  font-size: 32px;
   font-weight: bold;
-  color: #fff;
-  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0077, 0 0 30px #ff00ff;
+  color: red;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #990000;
   margin: 0;
-  animation: glow 2s infinite alternate;
 }
-
-@keyframes glow {
-  0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0077, 0 0 30px #ff00ff; }
-  100% { text-shadow: 0 0 20px #00ffff, 0 0 30px #00ff99, 0 0 40px #00ffcc; }
+.header p {
+  font-family: "Cursive", serif;
+  font-size: 16px;
+  color: #ccc;
+  margin: 5px 0 0;
 }
 
 .links {
@@ -44,64 +36,31 @@ body {
   margin: 30px auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
-
 .link {
-  position: relative;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 15px 25px;
-  border-radius: 12px;
-  background: #111;
-  color: #fff;
-  font-size: 18px;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #333;
+  font-size: 20px;
   font-weight: bold;
+  color: #fff;
   text-decoration: none;
-  overflow: visible;
-  text-shadow: 0 0 5px #fff;
-  transition: transform 0.2s ease;
+  gap: 10px;
+  background: linear-gradient(135deg, #fffc00, #f7e600);
+  box-shadow: 0 0 20px rgba(255,252,0,0.8), inset 0 0 15px rgba(255,252,0,0.4);
+  transition: 0.3s;
 }
-
 .link:hover {
-  transform: scale(1.05);
+  box-shadow: 0 0 30px #fffc00, inset 0 0 20px rgba(255,252,0,0.6);
+  transform: translateY(-3px);
 }
-
-/* خيط دقيق حول الزر مع ألوان كثيرة */
-.link::before {
-  content: "";
-  position: absolute;
-  inset: 0; /* يغطي الزر بالكامل */
-  padding: 2px; /* سماكة الخيط */
-  border-radius: 12px;
-  background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, magenta, pink, red, orange, yellow, lime, cyan, blue, magenta);
-  background-size: 300% 300%;
-  animation: borderFlow 3s linear infinite;
-  -webkit-mask: 
-    linear-gradient(#000 0 0) content-box, 
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  z-index: 1;
-}
-
-@keyframes borderFlow {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 100%; }
-  100% { background-position: 0% 0%; }
-}
-
-.icon {
-  font-size: 24px;
-  flex-shrink: 0;
-  filter: drop-shadow(0 0 8px #fff);
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.link:hover .icon {
-  transform: rotate(15deg) scale(1.2);
-  filter: drop-shadow(0 0 15px #fff);
+.snap-icon {
+  width: 28px;
+  height: 28px;
 }
 </style>
 </head>
@@ -109,22 +68,13 @@ body {
 
 <div class="header">
   <h1>JALAL</h1>
+  <p>The Dark Links of Legends</p>
 </div>
 
 <div class="links">
-  <a class="link" href="https://wa.me/967736820472" target="_blank">
-    <i class="fab fa-whatsapp icon" style="color:#25D366;"></i>
-    واتساب
-  </a>
-
-  <a class="link" href="https://www.instagram.com/jlala9713" target="_blank">
-    <i class="fab fa-instagram icon" style="color:#E1306C;"></i>
-    إنستقرام
-  </a>
-
   <a class="link" href="https://t.snapchat.com/DwI8fBTW" target="_blank">
-    <i class="fab fa-snapchat-ghost icon" style="color:#FFFC00;"></i>
-    سناب شات
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Snapchat_logo.svg/512px-Snapchat_logo.svg.png" alt="Snapchat" class="snap-icon">
+سناب شات
   </a>
 </div>
 
